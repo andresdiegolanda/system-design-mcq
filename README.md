@@ -159,3 +159,9 @@ Infrastructure and platform coverage: AWS (ALB, SQS, SNS, EventBridge, RDS Proxy
 - **Fan-out architectures** — push vs pull vs hybrid feeds, notification delivery
 - **Domain-specific designs** — auction bidding, coupon distribution, ticketing, URL shorteners, web crawlers, chat systems
 - **Resilience patterns** — circuit breakers, bulkheads, retry budgets, graceful degradation
+
+---
+
+## Cheat Sheet
+
+[`CHEAT-SHEET.md`](CHEAT-SHEET.md) — A comprehensive pre-session review covering all 26 topics with PlantUML diagrams, estimation formulas, decision trees, and quick-reference tables. Read it once before a practice session to prime your memory on key patterns, thresholds, and default technology choices.
