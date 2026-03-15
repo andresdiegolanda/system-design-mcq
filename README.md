@@ -1,6 +1,6 @@
 # System Design — Decision-Based Interview Questions
 
-200 multiple-choice questions for Principal/Staff Backend Engineer interviews. Every question presents a real scenario and forces a tradeoff decision. Wrong answers are plausible — the kind of thing a competent engineer might consider but that has specific downsides in that context.
+320 multiple-choice questions for Principal/Staff Backend Engineer interviews. Every question presents a real scenario and forces a tradeoff decision. Wrong answers are plausible — the kind of thing a competent engineer might consider but that has specific downsides in that context.
 
 ---
 
@@ -16,6 +16,12 @@
 | `system-design-answers-3.md` | Q101–Q150 | Full explanations with PlantUML diagrams |
 | `system-design-questions-4.md` | Q151–Q200 | CDN & DNS (cont.), Auth & Security, Observability, Classic Problems |
 | `system-design-answers-4.md` | Q151–Q200 | Explanations with interview tips |
+| `system-design-questions-5.md` | Q201–Q220 | Back-of-Envelope Estimation (QPS, storage, bandwidth, cache sizing) |
+| `system-design-answers-5.md` | Q201–Q220 | Step-by-step math with sequence diagrams |
+| `system-design-questions-6.md` | Q221–Q270 | Concurrency Control, DB Sharding, Real-Time Protocols, Caching & Resilience |
+| `system-design-answers-6.md` | Q221–Q270 | Full explanations with sequence diagrams |
+| `system-design-questions-7.md` | Q271–Q320 | Inventory Patterns, Fan-out & Feeds, URL Shortening & Crawling, Chat & Presence, Resilience |
+| `system-design-answers-7.md` | Q271–Q320 | Full explanations with sequence diagrams |
 
 ---
 
@@ -38,6 +44,17 @@
 | 13 | Authentication, Authorization & Security | Q164–Q175 |
 | 14 | Observability (Logging, Metrics, Tracing, Alerting) | Q176–Q185 |
 | 15 | Classic System Design Problems | Q186–Q200 |
+| 16 | Back-of-Envelope Estimation | Q201–Q220 |
+| 17 | Concurrency Control & Race Conditions | Q221–Q232 |
+| 18 | Database Selection & Sharding (Applied) | Q233–Q242 |
+| 19 | Communication Protocols & Real-Time Systems | Q243–Q252 |
+| 20 | Caching, Scaling & Resilience Patterns | Q253–Q262 |
+| 21 | System-Specific Design Decisions | Q263–Q270 |
+| 22 | Linearization, Inventory & Reservation Patterns | Q271–Q280 |
+| 23 | Fan-out, Feed & Notification Architectures | Q281–Q290 |
+| 24 | URL Shortening, Crawling & Content Systems | Q291–Q300 |
+| 25 | Chat, Presence & Real-Time Messaging | Q301–Q310 |
+| 26 | Resilience, Observability & Interview Patterns | Q311–Q320 |
 
 ---
 
@@ -45,9 +62,9 @@
 
 | Level | Count | Description |
 |-------|-------|-------------|
-| ★☆☆ | 15 | Warm-up. Senior engineer answers in 10 seconds. |
-| ★★☆ | 98 | Interview level. Requires weighing 2–3 tradeoffs. |
-| ★★★ | 87 | Principal/Staff level. Deep understanding of system behavior under failure or scale. |
+| ★☆☆ | 96 (30%) | Warm-up. Senior engineer answers in 10 seconds. |
+| ★★☆ | 160 (50%) | Interview level. Requires weighing 2–3 tradeoffs. |
+| ★★★ | 64 (20%) | Principal/Staff level. Deep understanding of system behavior under failure or scale. |
 
 ---
 
@@ -124,3 +141,21 @@ Infrastructure and platform coverage: AWS (ALB, SQS, SNS, EventBridge, RDS Proxy
 | Q198 | Distributed Task Scheduler |
 | Q199 | Consistent Hashing in Chat Routing |
 | Q200 | Instagram-Like Feed (end-to-end) |
+
+---
+
+## Back-of-Envelope Estimation (Q201–Q220)
+
+20 questions covering the quantitative skills interviewers expect: QPS calculations, storage sizing, bandwidth estimation, cache capacity planning, server count estimation, and database throughput modeling. Each answer includes step-by-step math.
+
+---
+
+## Pragmatic System Design Patterns (Q221–Q320)
+
+100 questions drawn from real-world system design case studies covering:
+- **Concurrency control** — optimistic locking, CAS, TOCTOU bugs, linearization
+- **Applied sharding & DB selection** — partition strategies, hot-key mitigation, polyglot persistence
+- **Real-time protocols** — WebSocket vs SSE vs long polling, presence systems, typing indicators
+- **Fan-out architectures** — push vs pull vs hybrid feeds, notification delivery
+- **Domain-specific designs** — auction bidding, coupon distribution, ticketing, URL shorteners, web crawlers, chat systems
+- **Resilience patterns** — circuit breakers, bulkheads, retry budgets, graceful degradation
